@@ -25,6 +25,7 @@
 
 .description{
     display: inline;
+<<<<<<< HEAD
 }
 
 .teasing-evenement{
@@ -33,4 +34,6 @@
     padding: 30px;
     border: 1px;
     border-color: black;
+=======
+>>>>>>> b9f12d81c30efec75d34b83966532e32300701b3
 }
