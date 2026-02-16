@@ -1,0 +1,36 @@
+.nav{
+    display: inline;
+    text-align: right;
+    color: white;
+}
+
+#header{
+    background-color: rgb(44, 44, 44);
+    color: white;
+}
+
+.footer{
+    background-color: rgb(44, 44, 44);
+    color: white;
+    text-align: center;
+}
+
+#tab-adresse{
+    display: inline;
+}
+
+#tab-contact{
+    display: inline;
+}
+
+.description{
+    display: inline;
+}
+
+.teasing-evenement{
+    display: flex;
+    column-gap: 3rem;
+    padding: 30px;
+    border: 1px;
+    border-color: black;
+}
