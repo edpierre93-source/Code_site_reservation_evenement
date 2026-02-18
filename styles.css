@@ -1,12 +1,31 @@
-.nav{
-    display: inline;
+#h1-title{
+    font-size: 3rem;
+    padding-left: 1rem;
+}
+
+#nav{
+    padding:
+}
+
+.nav-bar{
+    display: flex;
     text-align: right;
     color: white;
+    font-family: 'Courier New', Courier, monospace;
+    
 }
+
+.nav-title{
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    font-size: 1.5rem;
+    padding-right: 1rem;
+    }
 
 #header{
     background-color: rgb(44, 44, 44);
     color: white;
+    padding: 1rem;
 }
 
 .footer{
@@ -25,15 +44,36 @@
 
 .description{
     display: inline;
-<<<<<<< HEAD
 }
 
 .teasing-evenement{
     display: flex;
-    column-gap: 3rem;
-    padding: 30px;
-    border: 1px;
-    border-color: black;
-=======
->>>>>>> b9f12d81c30efec75d34b83966532e32300701b3
+    column-gap: 2rem;
+    padding: 5rem;
+    border-top: 1px solid rgb(228, 228, 228);
+    width: 30rem;
+}
+
+#evenement-marquant{
+    width: 35rem;
+}
+
+.teasing-general{
+    display: flex;
+    padding: 5rem;
+    column-gap: 2rem;
+}
+
+.txt-teasing-general{
+padding: 1rem 0 0 3rem;    
+}
+
+.titre-teasing-general{
+    font-size: 3rem;
+}
+
+.date{
+    background-color: black;
+    color: white;
+    padding: 4px;
 }
