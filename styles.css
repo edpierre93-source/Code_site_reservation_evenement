@@ -3,43 +3,55 @@
     padding-left: 1rem;
 }
 
-#nav{
-    
-}
-
 .nav-bar{
     display: flex;
-    text-align: right;
+    position: relative;
+    left: 67rem;
     color: white;
-    font-family: 'Courier New', Courier, monospace;
-    
 }
 
 .nav-title{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     color: white;
     font-size: 1.5rem;
-    padding-right: 1rem;
+    padding-right: 2.5rem;
+    text-decoration: none;
     }
 
 #header{
     background-color: rgb(44, 44, 44);
     color: white;
     padding: 1rem;
+    border-radius: 10px;
 }
 
 .footer{
     background-color: rgb(44, 44, 44);
     color: white;
+    display: flex;
+    height: 12rem;
+    border-radius: 10px;
+}
+
+.logo{
+    font-size: 40px;
     text-align: center;
+    padding: 1rem 0 0 6rem;
 }
 
-#tab-adresse{
-    display: inline;
+.footer-txt{
+    padding-right: 20rem;
+    text-align: center;
+    position: relative;
+    left: 30rem;
 }
 
-#tab-contact{
-    display: inline;
+.footer-title{
+    font-size: 28px;
+}
+
+.footer-data{
+    font-size: 20px;
 }
 
 .description{
@@ -49,13 +61,13 @@
 .teasing-evenement{
     display: flex;
     column-gap: 2rem;
-    padding: 5rem;
+    padding: 3rem;
     border-top: 1px solid rgb(228, 228, 228);
     width: 30rem;
 }
 
-#evenement-marquant{
-    width: 35rem;
+#img-evenement-marquant{
+    width: 45rem;
 }
 
 .teasing-general{
@@ -65,7 +77,8 @@
 }
 
 .txt-teasing-general{
-padding: 1rem 0 0 3rem;    
+padding: 1rem 0 0 10rem;
+
 }
 
 .titre-teasing-general{
