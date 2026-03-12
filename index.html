@@ -39,7 +39,7 @@
                 </span>
             </div>
             <div>
-                <h3 class="titre-teasing-general">titre evenement</h3>
+                <h2 class="titre-teasing-general">titre evenement</h2>
             </div>
             <div>
                 description evenement
@@ -49,7 +49,7 @@
     <div class="parent-zoom">
 <div class="enfant-zoom">
     <div>
-        <h2>Prochainement</h2>
+        <h3>Prochainement</h3>
     </div>
         <div class="teasing-evenement">
                 <img class="img-evenement" src="Images/carre_vert.png" alt="image concert">
@@ -111,7 +111,6 @@
     </div>
     </div>
 </div>
-</div>
 </main>
 <footer>
   <div class="footer">
@@ -142,30 +141,38 @@
         </div>
   </div>
 </footer>
-<script>
-    // 1. Appel de l'API
-    fetch('evenements.json')
-        .then(response => response.json()) // On transforme la réponse en objet JSON
-        .then(data => {
-            const conteneur = document.getElementById('liste-evenements');
-            
-            // 2. Boucle sur chaque événement reçu
-            data.forEach(event => {
-                const html = `
-                    <div class="teasing-evenement">
-                        <img class="img-evenement" src="${event.image}" alt="${event.titre}">
-                        <div>
-                            <div><span class="date">${event.date}</span></div>
-                            <div><h3>${event.titre}</h3></div>
-                            <div>${event.description}</div>
+   <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const conteneur = document.getElementById('liste-evenements');
+
+        fetch('http://localhost:3000/api/evenements')
+            .then(response => {
+                if (!response.ok) throw new Error("Erreur réseau");
+                return response.json();
+            })
+            .then(data => {
+                // On vide le contenu actuel (sauf le titre)
+                conteneur.innerHTML = '<h2>Prochainement</h2>';
+
+                data.forEach(event => {
+                    const html = `
+                        <div class="teasing-evenement">
+                            <img class="img-evenement" src="${event.image}" alt="${event.titre}">
+                            <div>
+                                <div><span class="date">${event.date}</span></div>
+                                <div><h3>${event.titre}</h3></div>
+                                <div>${event.description}</div>
+                            </div>
                         </div>
-                    </div>
-                `;
-                // 3. Injection dans le HTML
-                conteneur.innerHTML += html;
+                    `;
+                    conteneur.innerHTML += html;
+                });
+            })
+            .catch(error => {
+                console.error("Erreur API :", error);
+                conteneur.innerHTML += "<p style='color:red;'>Impossible de charger les événements (vérifiez que le serveur Node est lancé).</p>";
             });
-        })
-        .catch(error => console.error("Erreur API :", error));
+    });
 </script>
 </body>
 </html>
